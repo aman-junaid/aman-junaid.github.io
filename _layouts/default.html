@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title | escape }} · {{ site.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+  <meta name="description" content="{{ page.description | default: site.description | escape }}">
+  <meta name="theme-color" content="#142f28">
+  <meta property="og:title" content="{{ page.title | default: site.title | escape }}">
+  <meta property="og:description" content="{{ page.description | default: site.description | escape }}">
+  <meta property="og:type" content="{% if page.collection == 'guides' %}article{% else %}website{% endif %}">
+  <link rel="icon" href="{{ '/assets/images/met-icon.png' | relative_url }}" type="image/png">
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="Aman Junaid home"><span class="brand-mark">AJ</span><span>Aman Junaid<span class="brand-sub">Software · Apps · Ideas</span></span></a>
+    <nav aria-label="Main navigation">
+      <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}aria-current="page"{% endif %}>Home</a>
+      <a href="{{ '/apps/' | relative_url }}" {% if page.url contains '/apps' %}aria-current="page"{% endif %}>Apps</a>
+      <a href="{{ '/#about' | relative_url }}">About</a>
+      <a class="nav-download" href="mailto:amaan.wamiq@gmail.com">Get in touch <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+  <main id="main">{{ content }}</main>
+  <footer class="wrap site-footer">
+    <div><a class="footer-name" href="{{ '/' | relative_url }}">Aman Junaid</a><p>Building useful things for people.<br>Based in India.</p></div>
+    <nav aria-label="Footer navigation"><a href="{{ '/apps/' | relative_url }}">Apps & projects</a><a href="https://www.linkedin.com/in/aman-junaid/">LinkedIn ↗</a><a href="mailto:amaan.wamiq@gmail.com">Email</a></nav>
+    <p class="footer-note">© {{ 'now' | date: '%Y' }} Aman Junaid</p>
+  </footer>
+</body>
+</html>

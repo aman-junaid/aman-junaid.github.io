@@ -1,0 +1,7 @@
+---
+layout: default
+---
+<div class="wrap guide-layout">
+  <aside class="guide-sidebar"><a class="back-link" href="{{ '/apps/met/guides/' | relative_url }}">← All guides</a><p class="eyebrow">The MET handbook</p><nav aria-label="Guides">{% assign guides = site.guides | sort: 'order' %}{% for guide in guides %}<a href="{{ guide.url | relative_url }}"{% if page.url == guide.url %} aria-current="page"{% endif %}>{{ guide.title }}</a>{% endfor %}</nav></aside>
+  <article class="guide-article"><header><span class="eyebrow">{{ page.category }} · {{ page.reading_time }} min read</span><h1>{{ page.title }}</h1><p class="lead">{{ page.description }}</p><p class="version-note">Based on MET’s current app source. Screens and feature availability can vary by installed version.</p></header><div class="prose">{{ content }}</div><div class="article-footer"><a href="{{ '/apps/met/guides/' | relative_url }}">Explore more guides →</a><a href="mailto:amaan.wamiq@gmail.com">Need a hand?</a></div></article>
+</div>

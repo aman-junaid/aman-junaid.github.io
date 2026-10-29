@@ -1,0 +1,6 @@
+---
+title: Guides & tutorials
+description: Simple, practical guides to getting more out of My Expense Tracker.
+permalink: /apps/met/guides/
+---
+<section class="wrap section guide-index"><p class="eyebrow">The MET handbook</p><h1>Get to know<br>your everyday companion.</h1><p class="lead">A first entry, a better routine, a little more confidence.<br>Pick a guide and take it one step at a time.</p><div class="guide-grid">{% assign guides = site.guides | sort: 'order' %}{% for guide in guides %}<a class="guide-card" href="{{ guide.url | relative_url }}"><span class="guide-meta">{{ guide.category }} · {{ guide.reading_time }} min read</span><h2>{{ guide.title }}</h2><p>{{ guide.description }}</p><span class="read-guide">Read guide <span aria-hidden="true">↗</span></span></a>{% endfor %}</div><p class="help-note">Something missing? <a href="mailto:amaan.wamiq@gmail.com">Suggest a tutorial →</a></p></section>
