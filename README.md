@@ -41,7 +41,7 @@ order: 7
 
 Write the tutorial below the front matter. Navigation and the guide library update automatically. Use `{{ '/guides/getting-started/' | relative_url }}` for internal links so they work on repository paths and custom domains. Guide ordering controls the first three featured homepage guides.
 
-Global layout and navigation: `_layouts/default.html`. Article layout: `_layouts/guide.html`. Styles: `assets/style.css`. There is no client-side JavaScript, analytics, external font dependency, or visitor data collection added by this site.
+Global layout and navigation: `_layouts/default.html`. Article layout: `_layouts/guide.html`. Styles: `assets/style.css`. The small `assets/theme.js` script controls the light/dark switch and matching MET screenshots. It follows the device theme until a visitor chooses a theme, then saves that preference in browser local storage. There is no analytics or external font dependency. Paired screenshots are in `assets/images/met/light/` and `assets/images/met/dark/`; `_includes/met-screenshot.html` provides responsive WebP sources.
 
 ## Local preview
 

@@ -1,0 +1,4 @@
+<picture class="{{ include.class }}" data-met-picture>
+  <source data-dark-source media="(prefers-color-scheme: dark)" srcset="{{ '/assets/images/met/dark/' | append: include.screen | append: '-720.webp' | relative_url }} 720w, {{ '/assets/images/met/dark/' | append: include.screen | append: '.webp' | relative_url }} 1080w" sizes="{{ include.sizes | default: '315px' }}">
+  <img src="{{ '/assets/images/met/light/' | append: include.screen | append: '-720.webp' | relative_url }}" srcset="{{ '/assets/images/met/light/' | append: include.screen | append: '-720.webp' | relative_url }} 720w, {{ '/assets/images/met/light/' | append: include.screen | append: '.webp' | relative_url }} 1080w" sizes="{{ include.sizes | default: '315px' }}" width="1080" height="2400" loading="{{ include.loading | default: 'lazy' }}" alt="{{ include.alt | escape }}">
+</picture>
